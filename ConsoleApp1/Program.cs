@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Console;
+
 
 namespace ConsoleApp1
 {
@@ -11,45 +17,46 @@ namespace ConsoleApp1
                 do
                 {
                     string s1 = null;
-                    Console.Clear();
-                    Console.Write("\n\n\t-------------------------------\n");
-                    Console.Write("\t------ Menú de opciones -------\n");
-                    Console.Write("\t-------------------------------\n\n\n");
-                    Console.Write("\t1) Mostrar pelicula\n\n" + "\t2) Inventario\n\n" + "\t3) Ventas\n\n" + "\t4) Salir\n\n");
+                    Clear();
+                    Write("\n\n\t-------------------------------\n");
+                    Write("\t------ Menú de opciones -------\n");
+                    Write("\t-------------------------------\n\n\n");
+                    Write("\t1) Mostrar pelicula\n\n" + "\t2) Inventario\n\n" + "\t3) Ventas\n\n" + "\t4) Salir\n\n");
                     a = Convert.ToInt32(Console.ReadLine());
 
                     switch (a) {
                         case 1:
-                            Console.Write("\tMostrar pelicula");
-                            Console.WriteLine("\n\nPresiona cualquier tecla para continuar...");
+                            Write("\tMostrar pelicula");
+                            WriteLine("\n\nPresiona cualquier tecla para continuar...");
                             break;
                         case 2:
-                            Console.Write("\tInventario");
-                            Console.WriteLine("\n\nPresiona cualquier tecla para continuar...");
+                            Write("\tInventario");
+                            WriteLine("\n\nPresiona cualquier tecla para continuar...");
                             break;
                         case 3:
-                            Console.Write("\t¿Desea cargar el carrito de guardado anteriormente? \n\t1)Si (S) \n\t2)No (N)");
-                            s1 = Console.ReadLine();
+                            Write("\t¿Desea cargar el carrito de guardado anteriormente? \n\t1)Si (S) \n\t2)No (N)");
+                            s1 = ReadLine();
                             if s1 = "S"{
-                                Console.Write("Insertar carrito de compras txt");
+                                Write("Insertar carrito de compras txt");
                                 else 
                             }
-                            Console.WriteLine("\n\nPresiona cualquier tecla para continuar...");
+                            WriteLine("\n\nPresiona cualquier tecla para continuar...");
                             break;
                         case 4:
                             {
-                                Console.Write("\tHasta luego");
-                                Console.WriteLine("\n\nPresiona cualquier tecla para continuar...");
+                                Write("\tHasta luego");
+                                WriteLine("\n\nPresiona cualquier tecla para continuar...");
                                 break;
                             }
                         default:
-                            Console.WriteLine("\tEscoja una opción válida");
-                            Console.WriteLine("\n\nPresiona cualquier tecla para continuar...");
+                            WriteLine("\tEscoja una opción válida");
+                            WriteLine("\n\nPresiona cualquier tecla para continuar...");
+                            ReadKey();
                             break;
                     }
-                    Console.ReadKey();
                     
-                } while (a !=4);
+                    
+                } while (a !=4); //Ciclo para que se ejecute el menú
             }
             }
         }
